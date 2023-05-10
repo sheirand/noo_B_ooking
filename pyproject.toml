@@ -6,6 +6,7 @@ authors = ["sheirand <eugene.osakovich@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.95.1"}
 
 [tool.poetry.dev-dependencies]
 
