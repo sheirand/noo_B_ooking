@@ -7,6 +7,9 @@ authors = ["sheirand <eugene.osakovich@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = {extras = ["all"], version = "^0.95.1"}
+SQLAlchemy = "^2.0.12"
+alembic = "^1.10.4"
+psycopg2-binary = "^2.9.6"
 
 [tool.poetry.dev-dependencies]
 
