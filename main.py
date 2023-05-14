@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+    title="Noo[B]ooking"
+)
 
 @app.get("/")
 async def root():
