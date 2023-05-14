@@ -2,3 +2,5 @@
 # imported by Alembic
 from db.base_class import Base
 from models.user import User
+from models.property import Property
+from models.reservation import Reservation
