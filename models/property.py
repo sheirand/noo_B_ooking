@@ -20,11 +20,11 @@ class PropertyType(enum.Enum):
 class Property(Base):
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String)
-    type = Column(Enum(PropertyType))
+    title = Column(String(255), nullable=False)
+    type = Column(Enum(PropertyType), nullable=False)
     description = Column(String)
-    price = Column(Integer, index=True)
-    country = Column(String, index=True, nullable=False)
-    city = Column(String, index=True, nullable=False)
+    price = Column(Integer, index=True, nullable=False)
+    country = Column(String(255), index=True, nullable=False)
+    city = Column(String(255), index=True, nullable=False)
     owner_id = Column(Integer, ForeignKey("user.id"))
     owner = relationship("User", back_populates="property")

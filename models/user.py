@@ -12,8 +12,8 @@ if TYPE_CHECKING:
 class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    email = Column(String, unique=True, index=True, nullable=False)
+    name = Column(String(255))
+    email = Column(String(350), unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean(), default=True)
     is_superuser = Column(Boolean(), default=False)
