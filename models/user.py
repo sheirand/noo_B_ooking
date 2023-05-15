@@ -7,6 +7,7 @@ from sqlalchemy.orm import relationship
 
 if TYPE_CHECKING:
     from models.property import Property # noqa
+    from models.reservation import Reservation # noqa
 
 
 class User(Base):
@@ -18,3 +19,4 @@ class User(Base):
     is_active = Column(Boolean(), default=True)
     is_superuser = Column(Boolean(), default=False)
     property = relationship("Property", back_populates="owner")
+    reservations = relationship("Reservation", back_populates="guest")

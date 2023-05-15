@@ -11,7 +11,7 @@ RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 #
 FROM python:3.10.5
 
-WORKDIR /code
+WORKDIR /code/app
 
 COPY --from=requirements-stage /tmp/requirements.txt /code/requirements.txt
 
